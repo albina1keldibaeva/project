@@ -1,0 +1,42 @@
+.auto {
+    font-family: Inter;
+    &__content {
+        margin-top: 63px;
+        h1 {
+            @include fontStyle (#333, 64px, 700);
+            margin: 0;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .auto {
+        &__img {
+            max-width: 80%;
+        }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 656px) {
+.auto {
+    &__content {
+        h1 {
+            font-size: 30px;
+        }
+        
+    }
+    &__svg {
+        max-width: 50%;
+    }
+   &__img {
+    max-width: 100%;
+   }
+}
+}

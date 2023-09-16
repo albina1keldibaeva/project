@@ -1,0 +1,40 @@
+.description {
+    font-family: Inter;
+    &__content {
+        display: flex;
+        gap: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        div {
+            p {
+                @include fontStyle (#000, 17px, 300);
+                max-width: 721px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .description {
+        &__img {
+            max-width: 90%;
+        }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 656px) {
+    .description {
+        div {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

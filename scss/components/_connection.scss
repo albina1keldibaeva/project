@@ -1,0 +1,110 @@
+.connection {
+    font-family: Inter;
+    margin-top: 120px;
+    &__content {
+        h2 {
+            @include fontStyle (#BDBDBD, 64px, 300);
+        }
+    }
+    &__form {
+        display: flex;
+        gap: 30px;
+    }
+    &__sms {
+        max-width: 391px;
+        height: 120px;
+        margin: 0;
+        padding: 14px 0;
+        
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        label {
+            background: #F3F3F3;
+            width: 391px;
+        }
+        input {
+            outline: none;
+            outline-offset: 0;
+            background: #F3F3F3;
+            border: none;
+            padding: 15px 41px;
+        }
+    }
+    &__btn {
+        cursor: pointer;
+        background: #333;
+        border: none ;
+        width: 222px;
+        height: 71px;
+        @include fontStyle (#FFF, 12px, 300);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        transition: 0.3s;
+        button {
+            background: none;
+            border: none;
+            color: #FFF;
+        }
+        
+    }
+    &__btn:hover {
+        background: #9fc4ee;
+    }
+    &__text {
+        display: flex;
+        gap: 16px;
+        margin-top: 22px;
+        margin-bottom: 21px;
+        p {
+        @include fontStyle (#333, 13px, 400);
+        max-width: 331px;
+        }
+        button {
+            background: none;
+            border: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .connection {
+        &__content {
+            h2 {
+             display: flex;
+             justify-content: center;
+            }
+         }
+         &__img {
+            img {
+                max-width: 80%;
+                margin-left: 90px;
+            }
+         }
+        &__form {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        &__send {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+@media screen and (max-width: 552px) {
+    .connection {
+        &__content {
+            h2 {
+                font-size: 37px;
+            }
+        }   
+        
+    }
+}

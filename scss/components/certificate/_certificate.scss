@@ -1,0 +1,52 @@
+.certificate {
+    font-family: Inter;
+    &__title {
+        margin-top: 63px;
+        h1 {
+            @include fontStyle (#333, 64px, 700);
+            margin: 0;
+        }
+    }
+    &__img {
+        display: flex;
+        gap: 78px;
+        margin-top: 42px;
+    }
+    &__btns {
+            display: flex;
+            justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width:1170px) {
+    .certificate {
+        &__img {
+            display: flex;
+            flex-wrap: wrap;
+            align-self: center;
+            justify-content: center;
+        }
+        &__btns {
+            display: flex;
+            justify-content: center;
+        }
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .certificate {
+        &__title {
+            h1 {
+                font-size: 50px;
+            }
+            img {
+                max-width: 70%;
+            }
+        }
+    }
+}

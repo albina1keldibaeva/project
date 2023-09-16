@@ -1,0 +1,59 @@
+.info {
+    font-family: Inter;
+    &__title {
+        margin-top: 63px;
+        h1 {
+            @include fontStyle (#333, 64px, 700);
+            margin: 0;
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        p {
+            @include fontStyle (#333, 16px, 300);
+        }
+        span {
+            @include fontStyle (#333, 18px, 700);
+        }
+    }
+    &__content {
+        display: flex;
+        gap: 34px;
+    }
+    
+}
+
+@media screen and (max-width:1120px) {
+    .info {
+        &__content {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .info {
+        &__map {
+            iframe {
+            max-width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .info {
+        &__title {
+            h1 {
+                font-size: 40px;
+            }
+            img {
+                max-width: 70%;
+            }
+        }
+    }
+}
